@@ -1,13 +1,13 @@
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemas'
+import {schemaTypes} from '../back/schemas/schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'portfolio',
+  title: 'portback',
 
-  projectId: 'blut21g0',
+  projectId: 'iptv3dkx',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
