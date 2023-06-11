@@ -7,6 +7,7 @@ import {motion} from 'framer-motion'
 import { client, urlFor } from '../../client'
 import {AiFillEye, AiFillGithub} from 'react-icons/ai'
 import './Work.scss'
+import MotionWrap from '../../wrapper/MotionWrap'
 const Work = () => {
   const handleWorkFilter=(item)=>{
   setActiveFilter(item);
@@ -101,4 +102,7 @@ return (
   )
 }
 
-export default AppWrap(Work,'work')
+export default AppWrap(
+  MotionWrap (Work,'app__works'),
+  'work',
+  "app__primarybg")

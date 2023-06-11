@@ -3,7 +3,8 @@ import{motion} from'framer-motion'
 import './About.scss'
 // import { images } from '../../constants'
 import { AppWrap } from '../../wrapper'
-import { client, urlFor ,data } from '../../client'
+import { client, urlFor  } from '../../client'
+import MotionWrap from '../../wrapper/MotionWrap'
 
 // const abouts =[
 //   {title: 'web Developement', description:'I am a good developer',imgUrl:images.about01},
@@ -48,5 +49,8 @@ client.fetch(query).then((data)=>setAbouts(data))
   )
 }
 
-export default AppWrap(About,'about')
+export default AppWrap(
+  MotionWrap( About,'app__about'),
+  'about',
+  'app__whitebg');
 
