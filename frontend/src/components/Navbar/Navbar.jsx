@@ -12,23 +12,23 @@ const Navbar = () => {
   return (
     <nav className='app__navbar'>
         <div className='app__navbar-logo'>
-            <img src = {images.logo} alt = "logo"/>
+            <img src = {images.logok} className='logok' alt = "logo"/>
         </div>
         <ul className='app__navbar-links '>
-            {['home','about','contact','work','skill'].map((item)=>(
+            {['home','about','contact','work','skills'].map((item)=>(
              <li className='app__flex p-text' key={`link-${item}`}>
                 <div/>
                 <a href={`#${item}`}>{item}</a>
              </li>
             ))}
-            <li>{isAuthenticated && <p>{User.name}</p> }</li>
+            {/* <li>{isAuthenticated && <p>{User.name}</p> }</li>
            <li>
             {isAuthenticated ?(<button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
       Log Out
     </button>  ):(<button onClick={() => loginWithRedirect()}>Log In</button>
-          )}
+          )} */}
            
-    </li> 
+    {/* </li>  */}
     </ul>
 
      <div className='app__navbar-menu'>
